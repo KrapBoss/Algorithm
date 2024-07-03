@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    
+    /*
     internal class E2231 // 브루트포스 - 분해합
     {
         static void Main(string[] args)
@@ -34,9 +30,9 @@ namespace ConsoleApp1
             while (n != 0)
             {
                 sum += n % 10;  // 현재 숫자의 일의 자리를 더함
-                n /= 10;        // 한 자리씩 줄임
+                n /= 10;        // 한 자리씩 줄임. int 는 소수점이 안 남음
             }
             return sum;
         }
-    }
+    }*/
 }

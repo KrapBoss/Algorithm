@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="E2231.cs" />
+    <Compile Include="E31403.cs" />
+    <Compile Include="E27866.cs" />
+    <Compile Include="E2475.cs" />
     <Compile Include="E2798.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
