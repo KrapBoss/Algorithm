@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="E4153.cs" />
+    <Compile Include="E2920.cs" />
+    <Compile Include="E2577_ADD.cs" />
     <Compile Include="E2231.cs" />
+    <Compile Include="E10250.cs" />
     <Compile Include="E31403.cs" />
     <Compile Include="E27866.cs" />
     <Compile Include="E2475.cs" />

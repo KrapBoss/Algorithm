@@ -3,15 +3,20 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    
-    internal class E31403 // A+B-C
+    /*
+    internal class E10250 // ACM 호텔
     {
         static void Main(string[] args)
         {
-            string[] chars = new string[3];
-            for (int i = 0; i< 3;i++) chars[i] = Console.ReadLine().Trim();
-            Console.WriteLine(chars.Select(x => int.Parse(x)).Sum() - int.Parse(chars[2]) * 2);
-            Console.WriteLine(int.Parse(chars[0] + chars[1]) - int.Parse(chars[2]));
+            int TestData = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < TestData; i++)
+            {
+                int[] data = Console.ReadLine().Split().Select(x=>int.Parse(x)).ToArray();
+                int roomX = ((data[2] + data[0]) % data[0]) == 0 ? data[0] : ((data[2] + data[0]) % data[0]);
+                int roomY = (int)Math.Ceiling(data[2]  / (float)data[0]);
+                Console.WriteLine("{0:#}{1:0#}",roomX,roomY);
+            }
         }
-    }
+    }*/
 }
