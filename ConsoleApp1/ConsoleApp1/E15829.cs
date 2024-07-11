@@ -2,6 +2,7 @@
 
 namespace ConsoleApp1
 {
+    /*
     internal class E15829 //Hashing
     {
         //'a' 아스키코드  = 97
@@ -18,5 +19,5 @@ namespace ConsoleApp1
             }
             Console.WriteLine(hash);
         }
-    }
+    }*/
 }
