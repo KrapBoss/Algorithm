@@ -3,6 +3,7 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
+    /*
     internal class E1259 //최대 공약수와 최소 공배수
     {
         static void Main(string[] args)
@@ -23,4 +24,5 @@ namespace ConsoleApp1
             int G(int a, int b) => b == 0 ? a : G(b, a % b);
         }
     }
+    */
 }
