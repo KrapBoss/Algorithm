@@ -8,6 +8,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
             int a = int.Parse(Console.ReadLine());
             int t = 0;
             int sum = 1;
