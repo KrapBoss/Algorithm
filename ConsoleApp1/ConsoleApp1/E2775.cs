@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
+    /*
     internal class E2775 // 부녀회장이 될테야
     {
         //rooms[$"00{i:D2}"] = i;
@@ -29,5 +30,5 @@ namespace ConsoleApp1
             }
         }
     }
-
+    */
 }

@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="10989.cs" />
+    <Compile Include="E2869.cs" />
     <Compile Include="E2775.cs" />
     <Compile Include="E2609.cs" />
     <Compile Include="E1259.cs" />
