@@ -5,7 +5,7 @@ using static System.Console;
 
 namespace ConsoleApp1
 {
-    
+    /*
     internal class _10989 // 수 정렬하기 3
     {
         static void Main(string[] args)
@@ -70,8 +70,8 @@ namespace ConsoleApp1
             {
                 WriteLine(item);
             }
-            */
+            
         }
     }
-    
+    */
 }
