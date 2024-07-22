@@ -7,7 +7,7 @@ using static System.Console;
 
 namespace ConsoleApp1
 {
-    
+    /*
     internal class _1181 //  단어 정렬
     {
         static void Main(string[] args)
@@ -59,5 +59,5 @@ namespace ConsoleApp1
                 WriteLine(item);
             }
         }
-    }
+    }*/
 }
