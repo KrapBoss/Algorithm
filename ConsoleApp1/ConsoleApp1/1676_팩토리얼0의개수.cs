@@ -4,7 +4,7 @@ using static System.Console;
 
 namespace ConsoleApp1
 {
-    
+    /*
     internal class _1676_팩토리얼0의개수
     {
         static void Main(string[] args)
@@ -16,4 +16,5 @@ namespace ConsoleApp1
             Write(cnt);
         }
     }
+    */
 }

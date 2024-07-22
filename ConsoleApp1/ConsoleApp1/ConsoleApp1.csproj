@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="10989.cs" />
+    <Compile Include="2751_수정렬하기2.cs" />
     <Compile Include="1676_팩토리얼0의개수.cs" />
     <Compile Include="1436_영화감독숌.cs" />
     <Compile Include="1181_단어정렬.cs" />
