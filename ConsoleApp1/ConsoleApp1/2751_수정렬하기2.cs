@@ -5,6 +5,7 @@ using System.Text;
 
 namespace ConsoleApp1
 {
+    /*
     internal class _2751_수정렬하기2
     {
         static void Main(string[] args)
@@ -57,7 +58,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine(sb);
-            */
+            
         }
-    }
+    }*/
 }
