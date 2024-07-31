@@ -57,6 +57,8 @@
     <Compile Include="E15829.cs" />
     <Compile Include="E2292.cs" />
     <Compile Include="E1978.cs" />
+    <Compile Include="E7576_토마토_2차원.cs" />
+    <Compile Include="E7569_토마토_3차원.cs" />
     <Compile Include="E5430.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="E4153.cs" />
