@@ -63,6 +63,7 @@
     <Compile Include="E7569_토마토_3차원.cs" />
     <Compile Include="E5430.cs" />
     <Compile Include="E10026_적록색약.cs" />
+    <Compile Include="E7662_이중우선순위큐연산.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="E4153.cs" />
     <Compile Include="E2920.cs" />
