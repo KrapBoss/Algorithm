@@ -50,6 +50,7 @@
     <Compile Include="1181_단어정렬.cs" />
     <Compile Include="28702_FizzBuzz.cs" />
     <Compile Include="11050.cs" />
+    <Compile Include="E16928_뱀과사다리게임.cs" />
     <Compile Include="E2869_수 정렬하기.cs" />
     <Compile Include="E2775.cs" />
     <Compile Include="E2609.cs" />
