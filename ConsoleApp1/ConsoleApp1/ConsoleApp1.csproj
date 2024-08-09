@@ -64,6 +64,7 @@
     <Compile Include="E5430.cs" />
     <Compile Include="E10026_적록색약.cs" />
     <Compile Include="E7662_이중우선순위큐연산.cs" />
+    <Compile Include="E1916_최소비용구하기.cs" />
     <Compile Include="E9019_DSLR.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="E4153.cs" />
