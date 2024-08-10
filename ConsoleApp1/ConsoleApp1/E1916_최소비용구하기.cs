@@ -7,6 +7,7 @@ namespace consoleapp1
 {
     internal class E1916_최소비용구하기
     {
+        const int INF = 0x3f3f3f3f;
         static void Main(string[] args)
         {
             string[] input(StreamReader s) => s.ReadLine().Split();
@@ -26,7 +27,7 @@ namespace consoleapp1
                 {
                     for(int j = 0; j < city; j++)
                     {
-                        if (i != j) cost[i, j] = 100001;
+                        if (i != j) cost[i, j] = INF;
                     }
                 }
 
@@ -48,6 +49,7 @@ namespace consoleapp1
                 //작은 가중치 탐색
                 for(int i = 0; i< city; i++)
                 {
+                    //최솟값 찾기
                     int minIndex = GetMinIndex(visit, minCost);
 
                     //탐색 가능한 경우가 없는 경우 제거
@@ -70,7 +72,7 @@ namespace consoleapp1
         static int GetMinIndex(bool[] visit, int[] minCost)
         {
             int index = -1;
-            int min = 100001;
+            int min = INF;
             for(int i =0; i<visit.Length; i++)
             {
                 if (!visit[i] && (minCost[i] < min))
