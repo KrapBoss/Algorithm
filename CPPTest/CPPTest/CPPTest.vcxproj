@@ -126,11 +126,17 @@
     <ClCompile Include="bestalbum.cpp" />
     <ClCompile Include="BiggerNumver.cpp" />
     <ClCompile Include="Cloth.cpp" />
+    <ClCompile Include="correctstring.cpp" />
     <ClCompile Include="CPPTest.cpp" />
+    <ClCompile Include="crossthebridge.cpp" />
+    <ClCompile Include="dontwantsameNumber.cpp" />
+    <ClCompile Include="H-index.cpp" />
     <ClCompile Include="KNumver.cpp" />
     <ClCompile Include="marathon.cpp" />
     <ClCompile Include="PhoneKe`mon.cpp" />
     <ClCompile Include="PhoneNumber1.cpp" />
+    <ClCompile Include="process.cpp" />
+    <ClCompile Include="stockPrice.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
