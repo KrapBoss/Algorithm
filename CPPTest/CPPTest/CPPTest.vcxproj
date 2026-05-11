@@ -129,10 +129,13 @@
     <ClCompile Include="correctstring.cpp" />
     <ClCompile Include="CPPTest.cpp" />
     <ClCompile Include="crossthebridge.cpp" />
+    <ClCompile Include="decimalPoint.cpp" />
     <ClCompile Include="dontwantsameNumber.cpp" />
     <ClCompile Include="H-index.cpp" />
     <ClCompile Include="KNumver.cpp" />
     <ClCompile Include="marathon.cpp" />
+    <ClCompile Include="minRect.cpp" />
+    <ClCompile Include="mockexam.cpp" />
     <ClCompile Include="PhoneKe`mon.cpp" />
     <ClCompile Include="PhoneNumber1.cpp" />
     <ClCompile Include="process.cpp" />
