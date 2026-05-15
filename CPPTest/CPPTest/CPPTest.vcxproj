@@ -138,10 +138,12 @@
     <ClCompile Include="marathon.cpp" />
     <ClCompile Include="minRect.cpp" />
     <ClCompile Include="mockexam.cpp" />
+    <ClCompile Include="network.cpp" />
     <ClCompile Include="PhoneKe`mon.cpp" />
     <ClCompile Include="PhoneNumber1.cpp" />
     <ClCompile Include="process.cpp" />
     <ClCompile Include="stockPrice.cpp" />
+    <ClCompile Include="targetnumber.cpp" />
     <ClCompile Include="transmission tower.cpp" />
     <ClCompile Include="Vowel Dictionary.cpp" />
   </ItemGroup>
