@@ -17,6 +17,9 @@ vector<int> solution(int brown, int yellow) {
 
     int mx = brown;/*max(brown, yellow);*/
     int root = ceil(sqrt(brown + yellow));
+    floor(root);
+    round(root);
+    ceil(root);
     int result = brown + yellow;
 
     for (int x = root; x <= mx; x++) {

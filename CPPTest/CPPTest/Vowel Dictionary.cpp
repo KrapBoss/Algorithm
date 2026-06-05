@@ -27,6 +27,8 @@ int solution(string word) {
     {'U', 4}
     };
 
+    dic['a'] = 1;
+
     int v = 0;
     for (int i = 0; i < 5; i++) {
         v = v * 5 + 1;

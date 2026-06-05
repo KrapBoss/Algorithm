@@ -1,6 +1,8 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <iomanip>
+#include <sstream>
 #include <cmath>
 
 using namespace std;
@@ -41,7 +43,7 @@ static void Check(vector<vector<int>>& wires, vector<int>& lines, vector<bool>& 
 /// <returns></returns>
 int solution(int n, vector<vector<int>> wires) {
     int answer = 101;
-
+    
     for (int i = 0; i < wires.size(); i++)
     {
         vector<bool> visited(n, false);
@@ -61,6 +63,14 @@ int solution(int n, vector<vector<int>> wires) {
 
         if (_answer < answer) answer = _answer;
     }
+
+
+    double d = 3.1548;
+    float f = 3.1548;
+
+    stringstream ssss;
+    ssss << fixed << setprecision(2) << d;
+    ssss.str();
 
     return answer;
 }

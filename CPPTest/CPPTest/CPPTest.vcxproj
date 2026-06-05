@@ -123,8 +123,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="backtracking.cpp" />
     <ClCompile Include="bestalbum.cpp" />
     <ClCompile Include="BiggerNumver.cpp" />
+    <ClCompile Include="boom.cpp" />
     <ClCompile Include="carpet.cpp" />
     <ClCompile Include="Cloth.cpp" />
     <ClCompile Include="correctstring.cpp" />
@@ -133,19 +135,26 @@
     <ClCompile Include="decimalPoint.cpp" />
     <ClCompile Include="dontwantsameNumber.cpp" />
     <ClCompile Include="fatigue.cpp" />
+    <ClCompile Include="findpath.cpp" />
     <ClCompile Include="H-index.cpp" />
     <ClCompile Include="KNumver.cpp" />
     <ClCompile Include="marathon.cpp" />
     <ClCompile Include="minRect.cpp" />
     <ClCompile Include="mockexam.cpp" />
+    <ClCompile Include="morespicy.cpp" />
+    <ClCompile Include="n-queen.cpp" />
     <ClCompile Include="network.cpp" />
     <ClCompile Include="PhoneKe`mon.cpp" />
     <ClCompile Include="PhoneNumber1.cpp" />
     <ClCompile Include="process.cpp" />
+    <ClCompile Include="short distance.cpp" />
     <ClCompile Include="stockPrice.cpp" />
     <ClCompile Include="targetnumber.cpp" />
     <ClCompile Include="transmission tower.cpp" />
     <ClCompile Include="Vowel Dictionary.cpp" />
+    <ClCompile Include="wordTransfomer.cpp" />
+    <ClCompile Include="wordTransformBfs.cpp" />
+    <ClCompile Include="완전범죄.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
