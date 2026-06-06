@@ -1,96 +1,49 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 public class Solution
 {
-
-    public int solution(int[,] rectangle, int characterX, int characterY, int itemX, int itemY)
+    public int solution(int n, int[,] edge)
     {
-        int size = 102;
+        int startV = 1;
 
-        // 이걸 하는 이유는 같은 위치의 좌표상 공백이 하나도 없는 경우 서로 이동할 수 없는 경로임에도 이동하는 문제로 인해 이러한 방식을 취합니다.
-        int multiple = 2;
+        Queue<int> schedule = new Queue<int>();
 
-        itemX *= multiple;
-        itemY *= multiple;
-        characterX *= multiple;
-        characterY *= multiple;
+        List<List<int>> _edge = Enumerable.Range(0, n + 1).Select(_ => new List<int>()).ToList();
 
-
-        bool[,] map = new bool[size, size];
-        bool[,] visitor = new bool[size, size];
-        var directions = new (int x, int y)[]
-                        {
-                            (-1, 0),
-                            (1, 0),
-                            (0, -1),
-                            (0, 1)
-                        };
-
-        // 전체 이동 가능 처리
-        for (int i = 0; i < rectangle.GetLength(0); i++)
+        // 모든 점에서의 노드값을 저장합니다.
+        for(int i =0 ; i< edge.GetLength(0) ; i++)
         {
-            int leftX = rectangle[i, 0]* multiple;
-            int leftY = rectangle[i, 1]* multiple;
-            int rightX = rectangle[i, 2]* multiple;
-            int rightY = rectangle[i, 3]* multiple;
+            int sv = edge[i, 0];
+            int ev = edge[i, 1];
+            _edge[sv].Add(ev);
+            _edge[ev].Add(sv);
+        }
 
-            for (int x = leftX; x <= rightX; x++)
+        schedule.Enqueue(startV);
+
+        // 모든 거리 값 초기화
+        int[] dist = Enumerable.Repeat(-1, n + 1).ToArray();
+        dist[startV] = 0;
+
+        //여기서는 모든 노드를 방문 할 때, 최적의 노드라 가정한다면, BFS 방식으로 노드를 접근해서 카운트를 세아립니다.
+        while (schedule.Count > 0)
+        {
+            int currVertex = schedule.Dequeue();
+
+            for (int i =0; i< _edge[currVertex].Count; i++)
             {
-                for (int y = leftY; y <= rightY; y++)
+                if (dist[_edge[currVertex][i]] == -1)
                 {
-                    map[y, x] = true;
+                    dist[_edge[currVertex][i]] = dist[currVertex] + 1;
+                    schedule.Enqueue(_edge[currVertex][i]);
                 }
             }
         }
 
-        // 내부 마스킹 처리
-        for (int i = 0; i < rectangle.GetLength(0); i++)
-        {
-            int leftX = rectangle[i, 0] * multiple;
-            int leftY = rectangle[i, 1] * multiple;
-            int rightX = rectangle[i, 2] * multiple;
-            int rightY = rectangle[i, 3] * multiple;
+        int max = dist.Max();
 
-            for (int x = leftX + 1; x <= rightX -1 ; x++)
-            {
-                for (int y = leftY + 1; y <= rightY - 1; y++)
-                {
-                    map[y, x] = false;
-                }
-            }
-        }
-
-        // 이동 경로 저장
-        Queue<(int currX, int currY, int dist)> move = new Queue<(int currX, int currY, int dist)>();
-        List<int> goalDist = new List<int>();
-        move.Enqueue((characterX, characterY, 0));
-
-        while (move.Count > 0)
-        {
-            var position = move.Dequeue();
-
-            // 목적지 도달 시 저장
-            if(position.currX == itemX && position.currY == itemY)
-            {
-                goalDist.Add(position.dist);
-                continue;
-            }
-
-            // 4방향 이동 시작
-            foreach (var item in directions)
-            {
-                if (map[position.currY + item.y, position.currX + item.x] && !visitor[position.currY + item.y, position.currX + item.x])
-                {
-                    move.Enqueue((position.currX + item.x, position.currY + item.y, position.dist + 1));
-                    visitor[position.currY + item.y, position.currX + item.x] = true;
-                }
-            }
-        }
-
-        int min = goalDist.Min();
-        return min / multiple;
+        return dist.Count(x => x == max);
     }
 }
