@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-public class Solution
+public class DeimalTriangle
 {
     public int solution(List<List<int>> triangle)
     {
@@ -17,14 +17,14 @@ public class Solution
 
 
 
-        for(int i = triangle.Count-2; i >=0; i--)
+        for (int i = triangle.Count - 2; i >= 0; i--)
         {
             int maxWidth = triangle[i].Count;
 
-            for ( int x=  0; x< maxWidth; x++)
+            for (int x = 0; x < maxWidth; x++)
             {
-                int left = triangle[i+1][x];
-                int right = triangle[i+1][x+1];
+                int left = triangle[i + 1][x];
+                int right = triangle[i + 1][x + 1];
 
                 int max = Math.Max(left + triangle[i][x], right + triangle[i][x]);
                 triangle[i][x] = max;
@@ -32,6 +32,6 @@ public class Solution
         }
 
         answer = triangle[0][0];
-        return answer; 
+        return answer;
     }
 }

@@ -21,6 +21,8 @@ namespace ConsoleApp1
                 return mp == 0 ? x.id.CompareTo(y.id) : mp;
             }));
 
+            SortedSet<int> ss = new SortedSet<int>(Comparer<int>.Create((x, y) => { return x.CompareTo(y); }));
+
             int count = 0;
 
             foreach (string operation in operations)
