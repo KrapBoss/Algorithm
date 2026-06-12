@@ -44,11 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayMinSort.cs" />
+    <Compile Include="DecimalTriangle.cs" />
     <Compile Include="DoublePriorityQueue.cs" />
     <Compile Include="GettingITem.cs" />
     <Compile Include="Graph.cs" />
+    <Compile Include="JoyStick.cs" />
+    <Compile Include="MakeABiggerNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReserveCloths.cs" />
+    <Compile Include="SchoolPath.cs" />
+    <Compile Include="View_N.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

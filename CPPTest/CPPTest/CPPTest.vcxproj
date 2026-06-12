@@ -154,6 +154,7 @@
     <ClCompile Include="Vowel Dictionary.cpp" />
     <ClCompile Include="wordTransfomer.cpp" />
     <ClCompile Include="wordTransformBfs.cpp" />
+    <ClCompile Include="workinSchoolpath.cpp" />
     <ClCompile Include="완전범죄.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
