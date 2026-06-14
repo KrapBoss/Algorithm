@@ -1,39 +1,53 @@
 ﻿using System;
-using System.Text;
+using System.Collections.Generic;
+using System.Linq;
 
-/// <summary>
-/// 큰수 만들기
-/// 탐욕법을 통해 남아 선택할 수 있는 number.Length - k 의 자릿수에서
-/// 가장 큰 수를 선택하여 저장하는 방식.
-/// 그렇기에, 현재 선택한 개수, 그에 따른 선택 가능한 배열의 범위를 지정 하여 O(s * length) 번을 돌게 된다.
-/// </summary>
 public class Solution
 {
-    public string solution(string number, int k)
+    public struct DotData
     {
-        int seletCount = number.Length - k;
+        public int dot;
+        public int dist;
+    }
 
-        StringBuilder sb = new StringBuilder();
+    public void Dfs(List<List<DotData>> island, int dot, bool[] visitor, int target, int visited,int dist, ref int min)
+    {
+        if (visitor[dot]) return;
 
-        int currIndex = -1;
+        visitor[dot] = true;
 
-        for(int select =0; select < seletCount; select++)
-        {   // 선택한 개수
-            currIndex += 1;
-            char s = number[currIndex];
-
-            for (int x = currIndex; x <= (number.Length - seletCount + select); x++)
-            {   // 선택 가능한 배열의 자릿수
-                if(s  < number[x])
-                {
-                    s = number[x];
-                    currIndex = x;
-                }
-
-            }
-            sb.Append(s);
+        if (visited == target)
+        {
+            min = min > dist ? dist : min;
+            visitor[dot] = false;
+            return;
         }
 
-        return sb.ToString();
+        for (int i = 0; i < island[dot].Count; i++)
+        {
+            Dfs(island, island[dot][i].dot,visitor,target,visited+1, dist+ island[dot][i].dist, ref min);
+        }
+
+        visitor[dot] = false;
+    }
+
+    public int solution(int n, int[,] costs)
+    {
+        int answer = 0;
+
+        List<List<DotData>> island = Enumerable.Repeat(new List<DotData>(),n).ToList();
+
+        bool[] visitor = new bool[n];
+
+        for(int i = 0; i < costs.Length; i++)
+        {
+            island[costs[i, 0]].Add(new DotData(){dot = costs[i, 1],dist = costs[i, 2]});
+            island[costs[i, 1]].Add(new DotData() { dot = costs[i, 0], dist = costs[i, 2] });
+        }
+
+        answer = int.MaxValue;
+        Dfs(island, 0, visitor, n, 0, 0, ref answer);
+
+        return answer;
     }
 }
